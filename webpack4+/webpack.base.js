@@ -36,7 +36,7 @@ module.exports = {
                                         "chrome": "67",
                                         "safari": "11.1"
                                     },
-                                    "useBuiltIns": "usage",//知装载需要的api
+                                    "useBuiltIns": "usage",//只装载需要的api
                                     "corejs": 2 //明确版本
 
                                 }
