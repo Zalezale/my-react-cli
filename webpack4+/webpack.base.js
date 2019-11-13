@@ -11,7 +11,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Production'
+            title: 'Production',
+            template: './template.html'
         })
     ],
     output: {
@@ -39,8 +40,9 @@ module.exports = {
                                     "useBuiltIns": "usage",//只装载需要的api
                                     "corejs": 2 //明确版本
 
-                                }
-                            ]
+                                },
+                            ], "@babel/preset-react" //用于解析jsx
+
                         ],
                         "plugins": [
                             [
@@ -49,7 +51,7 @@ module.exports = {
                             ]
                         ]
                     }
-                }
+                },
 
             }
         ]
