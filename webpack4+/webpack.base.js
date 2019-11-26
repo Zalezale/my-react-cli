@@ -16,7 +16,8 @@ module.exports = {
         })
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
+        chunkFilename: '[name].js',
         path: path.resolve(__dirname, '../dist')
     },
     module: {
@@ -41,7 +42,7 @@ module.exports = {
                                     "corejs": 2 //明确版本
 
                                 },
-                            ], "@babel/preset-react" //用于解析jsx
+                            ], "@babel/preset-react"//用于解析jsx
 
                         ],
                         "plugins": [
@@ -53,6 +54,13 @@ module.exports = {
                     }
                 },
 
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
     }
