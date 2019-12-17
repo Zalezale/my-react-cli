@@ -1,10 +1,12 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as Actions from '../configs/actions'
-const wrapActions = Object.assign({}, Actions)
+import * as ActionsOther from '../configs/actionsOther'
+const wrapActions = Object.assign({}, Actions, ActionsOther)
 
 
 const mapStateToProps = (state, ownProps) => {
+    console.log(state)
     return {
         state
     }

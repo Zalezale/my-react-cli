@@ -15,15 +15,18 @@ class PageA extends Component {
     }
     render() {
         const { state, actions } = this.props
-        const { addItem, subtractItem } = actions
+        const { reducer, reducerOther } = state
+        const { addItem, subtractItem, updateTxt } = actions
+        console.log(actions)
         return <div>
             <a onClick={this.gtB.bind(this)}>去b页面</a>
             <a onClick={this.gtC.bind(this)}>去c页面</a>
             <ul>
                 {
-                    state.map((item, position) => <li key={position}><span onClick={() => addItem(item)}>+     </span>{item}<span onClick={() => subtractItem(position)}>     -</span></li>)
+                    reducer.map((item, position) => <li key={position}><span onClick={() => addItem(item)}>+     </span>{item}<span onClick={() => subtractItem(position)}>     -</span></li>)
                 }
             </ul>
+            <input type='text' placeholder={reducerOther} onChange={(e) => updateTxt(e.target.value)} />
         </div>
     }
 }

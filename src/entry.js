@@ -3,11 +3,16 @@ import ReactDom from 'react-dom'
 import { HashRouter as Router, Route } from "react-router-dom"
 import routes from './configs/routes'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import reducer from './configs/reducer'
+import reducerOther from './configs/reducerOther'
 import './common/common.css'
 
-const store = createStore(reducer)
+const rootReducer = combineReducers({
+    reducer,
+    reducerOther
+})
+const store = createStore(rootReducer)
 
 ReactDom.render(
     <Provider store={store}>
