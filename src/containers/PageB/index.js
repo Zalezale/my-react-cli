@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import connect from '../connect'
-
+import Footer from '../../components/footer'
 class PageB extends Component {
     gtA = () => {
         this.props.history.push('pagea')
@@ -9,7 +9,7 @@ class PageB extends Component {
         const { state, actions } = this.props
         const { reducer, reducerOther } = state
         const { addItem, subtractItem } = actions
-        return <div>
+        return <div className='container'>
             <a onClick={this.gtA.bind(this)}>去a页面</a>
             <ul>
                 {
@@ -17,6 +17,7 @@ class PageB extends Component {
                 }
             </ul>
             <h5>{reducerOther}</h5>
+            <Footer />
         </div>
     }
 }
