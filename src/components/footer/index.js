@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import style from './style.less'
+import style from './footer.less'
 class Footer extends Component {
     render() {
         return <div className={style.footer}>
