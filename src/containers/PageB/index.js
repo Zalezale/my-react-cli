@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import connect from '../connect'
 import Footer from '../../components/footer'
+import ErrorCatch from '../../components/errorCatch'
 class PageB extends Component {
     gtA = () => {
         this.props.history.push('pagea')
@@ -17,7 +18,9 @@ class PageB extends Component {
                 }
             </ul>
             <h5>{reducerOther}</h5>
-            <Footer />
+            <ErrorCatch>
+                <Footer />
+            </ErrorCatch>
         </div>
     }
 }
