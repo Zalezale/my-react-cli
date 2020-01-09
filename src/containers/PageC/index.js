@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import connect from '../connect'
 import Footer from '../../components/footer'
-import style from './style.less'
+import './style.less'
 
 class PageC extends Component {
     gtA = () => {
@@ -11,7 +11,7 @@ class PageC extends Component {
         const { state, actions } = this.props
         const { reducer, reducerOther } = state
         const { addItem, subtractItem } = actions
-        return <div className={style.container}>
+        return <div className='container'>
             <a onClick={this.gtA.bind(this)}>去a页面</a>
             <ul>
                 {
