@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import connect from '../connect'
-import style from './style.less'
+import './style.less'
 class PageA extends Component {
     constructor(props) {
         super(props)
@@ -17,7 +17,7 @@ class PageA extends Component {
         const { state, actions } = this.props
         const { reducer, reducerOther } = state
         const { addItem, subtractItem, updateTxt } = actions
-        return <div className={style.container}>
+        return <div className='container-pagea'>
             <a onClick={this.gtB.bind(this)}>去b页面</a>
             <a onClick={this.gtC.bind(this)}>去c页面</a>
             <ul>
