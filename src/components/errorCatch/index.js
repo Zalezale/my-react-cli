@@ -1,4 +1,7 @@
 import React from 'react'
+/**
+ * 事件处理器,异步代码,服务端的渲染代码,在 error boundaries 区域内的错误
+ */
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
