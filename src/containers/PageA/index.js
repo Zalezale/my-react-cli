@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import connect from '../connect'
 import './style.less'
+import low from './imgs/25kb.jpg'
+import height from './imgs/118kb.jpg'
 class PageA extends Component {
     constructor(props) {
         super(props)
@@ -26,6 +28,8 @@ class PageA extends Component {
                 }
             </ul>
             <input type='text' placeholder={reducerOther} onChange={(e) => updateTxt(e.target.value)} />
+            <img src={low} />
+            <img src={height} />
         </div>
     }
 }
