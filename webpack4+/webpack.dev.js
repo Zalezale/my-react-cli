@@ -55,7 +55,19 @@ module.exports = merge(common, {
 
                     },
                 ]
-            }
+            },
+            {
+                test: /\.css$/,
+                include: [/antd\/dist\/antd.css/],
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                ]
+            },
 
         ]
     }

@@ -20,6 +20,26 @@ module.exports = {
         chunkFilename: '[name].js',
         path: path.resolve(__dirname, '../dist')
     },
+    optimization: {
+        /**
+         * 代码抽离的前提条件
+         * 1、同步引用处不少于2
+         * 2、文件大小本身大于30kb
+         * 3、不影响页面初始化时的请求
+         */
+        splitChunks: {
+            /**
+             * 由于js加载机制，只有当vendor.js与app.js都加载完成页面才能呈现，所以将代码抽离到入口文件和vendor没差别
+             */
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendors",
+                    chunks: "all"
+                }
+            }
+        }
+    },
     module: {
         rules: [
             {

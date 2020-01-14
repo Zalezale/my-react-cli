@@ -3,6 +3,8 @@ import connect from '../connect'
 import './style.less'
 import low from './imgs/25kb.jpg'
 import height from './imgs/118kb.jpg'
+
+
 class PageA extends Component {
     constructor(props) {
         super(props)
