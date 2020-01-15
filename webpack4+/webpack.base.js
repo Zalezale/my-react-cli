@@ -16,8 +16,8 @@ module.exports = {
         })
     ],
     output: {
-        filename: '[name].js',
-        chunkFilename: '[name].js',
+        filename: 'js/[name].js',
+        chunkFilename: 'js/[name].js',
         path: path.resolve(__dirname, '../dist')
     },
     optimization: {
@@ -82,6 +82,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
+                            name: 'media/[name].[hash:12].[ext]',
                             limit: 20000,
                         }
                     },
