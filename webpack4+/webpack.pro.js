@@ -37,7 +37,25 @@ module.exports = merge(common, {
 
                     },
                 ]
-            }
+            },
+            {
+                test: /\.css$/,
+                include: [/antd\/dist\/antd.css/],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // you can specify a publicPath here
+                            // by default it use publicPath in webpackOptions.output
+                            publicPath: '../'
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                ]
+            },
+
 
         ]
     }
