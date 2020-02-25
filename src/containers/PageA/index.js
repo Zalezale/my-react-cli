@@ -3,13 +3,15 @@ import connect from '../connect'
 import './style.less'
 import low from './imgs/25kb.jpg'
 import height from './imgs/118kb.jpg'
-
+import context from '../context'
 
 class PageA extends Component {
+    static contextType = context
     constructor(props) {
         super(props)
     }
     componentDidMount() {
+        console.log('pagea:' + JSON.stringify(this.context))
     }
     gtB() {
         this.props.history.push('/pageb')
@@ -30,8 +32,8 @@ class PageA extends Component {
                 }
             </ul>
             <input type='text' placeholder={reducerOther} onChange={(e) => updateTxt(e.target.value)} />
-            <img src={low} />
-            <img src={height} />
+            <img src={low} style={{ width: '200px', display: 'block' }} />
+            <img src={height} style={{ width: '200px', display: 'block' }} />
         </div>
     }
 }
