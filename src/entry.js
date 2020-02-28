@@ -6,8 +6,8 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import reducer from './configs/reducer'
 import reducerOther from './configs/reducerOther'
-import './common/common.less'
 import 'antd/dist/antd.css'
+import './common/common.less'
 
 const rootReducer = combineReducers({
     reducer,

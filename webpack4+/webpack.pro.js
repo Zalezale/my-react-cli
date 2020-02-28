@@ -4,17 +4,23 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.base.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+let plugins = ~process.argv.indexOf('--analyzer') ? [new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: "css/[name].css",
+    chunkFilename: "css/[name].css"
+}),
+new BundleAnalyzerPlugin()] : [new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: "css/[name].css",
+    chunkFilename: "css/[name].css"
+})]
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
-    plugins: [
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "[name].css",
-            chunkFilename: "[name].css"
-        })
-    ],
+    plugins,
     module: {
         rules: [
             {
