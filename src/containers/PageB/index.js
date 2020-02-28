@@ -4,7 +4,7 @@ import Footer from '../../components/footer'
 import ErrorCatch from '../../components/errorCatch'
 import { DatePicker } from 'antd';
 import common from '../../until/common'
-import Context, { Theme } from '../Context'
+import Context, { Theme } from '../context'
 
 
 class PageB extends Component {
