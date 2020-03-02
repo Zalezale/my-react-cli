@@ -2,7 +2,8 @@
   "scripts": {
     "start": "cd webpack4+ && node server.js",
     "build": "cd webpack4+ && webpack --config webpack.pro.js",
-    "analyzer": "cd webpack4+ && webpack --config webpack.pro.js  --analyzer"
+    "analyzer": "cd webpack4+ && webpack --config webpack.pro.js  --analyzer",
+    "eslint": "eslint src/"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
