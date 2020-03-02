@@ -1,9 +1,11 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.base');
-
+const merge = require('webpack-merge')
+const common = require('./webpack.base')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
+const { port } = require('./common.js')
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
+    plugins: [new OpenBrowserPlugin({ url: `http://localhost:${port}` })],
     module: {
         rules: [
             {
@@ -12,27 +14,27 @@ module.exports = merge(common, {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        "presets": [
+                        'presets': [
                             [
-                                "@babel/preset-env",
+                                '@babel/preset-env',
                                 {
-                                    "targets": {
-                                        "edge": "17",
-                                        "firefox": "60",
-                                        "chrome": "67",
-                                        "safari": "11.1"
+                                    'targets': {
+                                        'edge': '17',
+                                        'firefox': '60',
+                                        'chrome': '67',
+                                        'safari': '11.1'
                                     },
-                                    "useBuiltIns": "usage",//只装载需要的api
-                                    "corejs": 2 //明确版本
+                                    'useBuiltIns': 'usage',//只装载需要的api
+                                    'corejs': 2 //明确版本
 
                                 },
-                            ], "@babel/preset-react"//用于解析jsx
+                            ], '@babel/preset-react'//用于解析jsx
 
                         ],
-                        "plugins": [
+                        'plugins': [
                             [
-                                "@babel/plugin-transform-runtime",//设定局部变量，防止多模块不兼容的问题
-                                { "corejs": 2 }//设定版本
+                                '@babel/plugin-transform-runtime',//设定局部变量，防止多模块不兼容的问题
+                                { 'corejs': 2 }//设定版本
                             ],
                             '@babel/plugin-proposal-class-properties'//解决箭头函数在class中无效的问题
                         ]
@@ -71,4 +73,4 @@ module.exports = merge(common, {
 
         ]
     }
-});
+})
