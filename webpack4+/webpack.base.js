@@ -20,6 +20,9 @@ module.exports = {
         chunkFilename: 'js/[name].js',
         path: path.resolve(__dirname, '../dist')
     },
+    resolve: {
+        extensions: ['.wasm', '.mjs', '.js', '.json', '.less']
+    },
     optimization: {
         /**
          * 代码抽离的前提条件
