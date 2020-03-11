@@ -8,6 +8,12 @@
 性能分析
 ``npm run analyzer ``
 
+规范代码结构
+``npm run eslint ``
+
+单元测试
+``npm run test``
+
 * 动态路由按需加载，不用担心 app 过于臃肿
 
 * 支持 Redux

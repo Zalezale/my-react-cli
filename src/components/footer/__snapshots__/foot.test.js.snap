@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="footer"
+  style={
+    Object {
+      "background": "yellow",
+    }
+  }
+>
+  <h5>
+    我是底部哦
+  </h5>
+</div>
+`;
