@@ -13,6 +13,7 @@
 
 单元测试
 ``npm run test``
+* 设立babel.config.js使jest可以解析react组件，在ject.config.js中设立moduleNameMapper可以解析其他额外资源文件
 
 * 动态路由按需加载，不用担心 app 过于臃肿
 
