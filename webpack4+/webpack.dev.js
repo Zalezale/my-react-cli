@@ -26,6 +26,14 @@ module.exports = merge(common, {
                         loader: 'css-loader',
                     },
                     {
+                        loader: 'px2rem-loader',
+                        // options here
+                        options: {
+                            remUni: 75,
+                            remPrecision: 8
+                        }
+                    },
+                    {
                         loader: 'less-loader',
 
                     },
@@ -41,6 +49,14 @@ module.exports = merge(common, {
                     {
                         loader: 'css-loader',
                     },
+                    {
+                        loader: 'px2rem-loader',
+                        // options here
+                        options: {
+                            remUni: 75,
+                            remPrecision: 8
+                        }
+                    }
                 ]
             },
 
