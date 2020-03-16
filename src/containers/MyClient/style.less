@@ -1,0 +1,96 @@
+@import '../../common/common.less';
+
+.my-client{
+    .line{
+        opacity: 0.29;
+background: #53A5FE;
+border: 1px solid #979797;
+height: 4 * @basic;
+    }
+    .client{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #3099FF;
+        height: 89.5 * @basic;
+        .detail{
+            display: flex;
+            align-items: center;
+            margin-left: 18 * @basic;
+
+            .head-portrail{
+                height: 70 * @basic;
+                width: 70 * @basic;
+                border-radius: 100%;
+            }
+            .name{
+                display: flex;
+                flex-direction: column;
+                margin-left: 11.5 * @basic;
+                label{
+                    font-family: PingFangSC-Semibold;
+                    font-size: 20 * @basic;
+                    color: #FFFFFF;
+                    letter-spacing: 0.32 * @basic;
+                    text-align: center;
+                }
+                .address{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                     img{
+                         width: 21 * @basic;
+                         height: 25 * @basic;
+                     }
+                     span{
+                        font-family: PingFangSC-Medium;
+                        font-size: 14 * @basic;
+                        color: #53A5FE;
+                        letter-spacing: 0.23 * @basic;
+                        text-align: center;
+                     }
+                }
+        
+            }
+        }
+    
+        .tel{
+            margin-right: 23 * @basic;
+            .tip{
+                display: flex;
+                align-items: center;
+                span{
+                    display: block;
+                    width: 5 * @basic;
+                    height: 5 * @basic;
+                    border-radius: 100%;
+                }
+                .stop{
+                    background: #FF3B30;
+                }
+                .using{
+                    background: #00B578;
+                }
+                .none{
+                    display: none;
+                }
+                label{
+                    margin-left: 6 * @basic;
+                    font-family: PingFangSC-Regular;
+font-size: 12 * @basic;
+color: #FFFFFF;
+letter-spacing: 0.19 @basic;
+text-align: center;
+                }
+
+            }
+            .phone{
+                font-family: PingFangSC-Semibold;
+font-size: 16 * @basic;
+color: #FFFFFF;
+letter-spacing: 0.26 * @basic;
+text-align: center;
+            }
+            }
+    }
+}

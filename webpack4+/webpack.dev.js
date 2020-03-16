@@ -10,7 +10,7 @@ module.exports = merge(common, {
         app2: ['../src/entry.js', 'webpack-hot-middleware/client?noInfo=true&reload=true']
     },
     plugins: [
-        new OpenBrowserPlugin({ url: `http://localhost:${port}` }),
+        new OpenBrowserPlugin({ url: `http://localhost:${port}/#/menu` }),
         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
@@ -54,7 +54,7 @@ module.exports = merge(common, {
                         // options here
                         options: {
                             remUni: 75,
-                            remPrecision: 8
+                            remPrecision: 4
                         }
                     }
                 ]
