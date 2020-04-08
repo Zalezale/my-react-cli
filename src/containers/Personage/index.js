@@ -32,7 +32,7 @@ class Personage extends Component {
                     <span>修改密码</span>
                     <img src={right} />
                 </a>
-                <a className='button'>
+                <a className='button' onClick={() => this.actions('/login')}>
                     <span>退出登陆</span>
                     <img src={right} />
                 </a>

@@ -1,0 +1,38 @@
+@import '../../common/common.less';
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @import './common.less';
+
+    button {
+        background: #53A5FE;
+        border-radius: 27*@basic;
+        border-radius: 27*@basic;
+        width: 320*@basic;
+        height: 54*@basic;
+        font-family: PingFangSC-Regular;
+        font-size: 18*@basic;
+        color: #FFFFFF;
+        letter-spacing: 0.29*@basic;
+    }
+
+    .other-actions {
+        margin-top: 28*@basic;
+        display: flex;
+        flex-direction: row;
+        width: 320*@basic;
+
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            font-family: PingFangSC-Regular;
+            font-size: 14*@basic;
+            color: #FFFFFF;
+            letter-spacing: 0.23*@basic;
+        }
+    }
+}

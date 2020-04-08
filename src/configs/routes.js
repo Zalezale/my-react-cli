@@ -9,6 +9,16 @@ const routes = [
         component: Menu,
     },
     {
+        path: '/register',
+        component: asyncImportComponent(() => import(/* webpackChunkName: "Register" */ '../containers/Register')),
+
+    },
+    {
+        path: '/login',
+        component: asyncImportComponent(() => import(/* webpackChunkName: "Login" */ '../containers/Login')),
+
+    },
+    {
         path: '/qrcode',
         component: asyncImportComponent(() => import(/* webpackChunkName: "QRCode" */ '../containers/QRCode')),
 
